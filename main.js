@@ -1,15 +1,21 @@
+/* global $ */
+
 $(function () {
 
 window.onscroll = function() {
-    myFunction();
+    scrollFunc();
 };
     
 var navbar = document.getElementById("navbar");
-var navbar_logo = document.getElementById("small-logo-img");
 var sticky = navbar.offsetTop;
-console.log(sticky);
+var sidebar = document.getElementById("sidebar-wrapper");
+var sidesticky = sidebar.offsetTop;
 
-function myFunction() {
+var navbar_logo = document.getElementById("small-logo-img");
+console.log(sticky);
+console.log(sidesticky);
+
+function scrollFunc() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("navbar-fixed-top");
     navbar_logo.classList.add("show-logo");
@@ -19,6 +25,17 @@ function myFunction() {
     navbar_logo.classList.remove("show-logo");
     navbar_logo.classList.add("hide-logo");
   }
+  
+  if (window.pageYOffset >= sticky) {
+    sidebar.style.top = (sidesticky - sticky).toString() + "px";
+  } else {
+    sidebar.style.top = (sidesticky - window.pageYOffset).toString() + "px";
+  }
 }
+
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
 
 });
