@@ -36,6 +36,8 @@ function scrollFunc() {
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
+  $("#menu-toggle").toggleClass("toggled");
+  $("#menu-toggle").find(".glyphicon").toggleClass("glyphicon-menu-right").toggleClass("glyphicon-menu-left");
 });
 
 });

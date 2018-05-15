@@ -11,14 +11,19 @@
   background: white;
   border: none;
   font-family: "Bodoni";
-  font-weight: bolder;
-  color: black;
   margin: 0px;
+  border-bottom: 1px solid #B690C1;
+  border-radius: 0px;
+}
+
+#navbar a {
+  color: #555;
 }
 
 #navbar .active a {
   background: white;
   font-style: italic;
+  color: black;
 }
 
 /* Page content */
@@ -71,7 +76,7 @@ body {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #000;
+  background: #B690C1;
   -webkit-transition: width 0.5s ease, padding 0.5s ease, margin 0.5s ease;
   -moz-transition: width 0.5s ease, padding 0.5s ease, margin 0.5s ease;
   -o-transition: width 0.5s ease, padding 0.5s ease, margin 0.5s ease;
@@ -91,6 +96,36 @@ body {
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
   margin-right: -250px;
+}
+
+#menu-toggle {
+  position: fixed;
+  height: 50px;
+  width: 30px;
+  background-color: #B690C1;
+  border: none;
+  border-radius: 0px;
+  padding: 0px;
+  -webkit-transition: margin 0.5s ease, width 0.1s linear;
+  -moz-transition: margin 0.5s ease, width 0.1s linear;
+  -o-transition: margin 0.5s ease, width 0.1s linear;
+  transition: margin 0.5s ease, width 0.1s linear;
+}
+
+#menu-toggle:hover {
+  width: 40px;
+}
+
+#menu-toggle.toggled {
+  margin-left: 250px;
+}
+
+.sidebar-nav li a .glyphicon {
+  margin-left: -40px;
+  margin-top: 12px;
+  font-size: 1.7em;
+  padding: 0px;
+  color: white;
 }
 
 
@@ -113,7 +148,7 @@ body {
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  color: white;
 }
 
 .sidebar-nav li a:hover {
@@ -162,4 +197,40 @@ body {
     position: relative;
     margin-right: 0;
   }
+}
+
+.collapse li {
+  margin-left: 30px;
+  transition: margin 0.1s ease;
+}
+
+ul.dropdown-lr {
+  width: 300px;
+  font-family: "Bodoni";
+}
+
+/* mobile fix */
+@media (max-width: 768px) {
+	.dropdown-lr h3 {
+		color: #eee;
+	}
+	.dropdown-lr label {
+		color: #eee;
+	}
+}
+
+#login-submit {
+  background-color: #B690C1;
+  border-radius: 0px;
+  border: none;
+}
+
+.dropdown-menu {
+  z-index: 1000;
+  margin-top: 0.5px !important;
+  border: 1px solid #B690C1;
+  border-top-color: white;
+  border-right-color: white;
+  border-radius: 0px;
+  box-shadow: none;
 }
