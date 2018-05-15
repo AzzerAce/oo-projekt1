@@ -234,3 +234,12 @@ ul.dropdown-lr {
   border-radius: 0px;
   box-shadow: none;
 }
+
+#naslovnica {
+  width: 40%;
+  height: 40%;
+}
+
+.container-fluid {
+  padding-left: 30px;
+}
