@@ -20,9 +20,14 @@
   color: #555;
 }
 
+#navbar a:hover {
+  color: black;
+}
+
 #navbar .active a {
   background: white;
   font-style: italic;
+  font-weight: bold;
   color: black;
 }
 
@@ -30,6 +35,7 @@
 .content {
   padding: 16px;
   font-family: "Garamond";
+  font-size: 16px;
   width: 80%;
   margin: auto;
 }
@@ -54,6 +60,13 @@
 /* Sidebar workings */
 body {
   overflow-x: hidden;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #E8DAEB;
+}
+
+#page {
+  background-color: white;
 }
 
 #wrapper {
@@ -138,6 +151,8 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: "Bodoni";
+  font-size: 18px;
 }
 
 .sidebar-nav li {
@@ -181,7 +196,7 @@ body {
     padding-left: 0;
   }
   #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 70px;
   }
   #sidebar-wrapper {
     width: 0;
@@ -227,19 +242,13 @@ ul.dropdown-lr {
 
 .dropdown-menu {
   z-index: 1000;
-  margin-top: 0.5px !important;
+  margin-top: -0.5px !important;
   border: 1px solid #B690C1;
-  border-top-color: white;
-  border-right-color: white;
+  border-top: 2px solid white;
   border-radius: 0px;
   box-shadow: none;
 }
 
 #naslovnica {
-  width: 40%;
-  height: 40%;
-}
-
-.container-fluid {
-  padding-left: 30px;
+  width: 100%;
 }

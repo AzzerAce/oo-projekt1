@@ -11,10 +11,10 @@
   <script src="main.js"></script>
 </head>
 <body>
-
+<div id="page">
 <img id="logo-img" src="./Images/dark_napis.png">
 <nav id="navbar" class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container-fluid" style="padding-right:35px">
     <div class="navbar-header">
       <img id="small-logo-img" class="hide-logo" src="./Images/navbar_logo.png">
     </div>
@@ -87,32 +87,47 @@
         <a href="" class="btn btn-secondary" id="menu-toggle"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
       </li>
       <li>
-        <a href="#">Vsebina publikacije</a>
+        <a href="#">Open Journal Systems</a>
       </li>
       <li>
-        <a href="#">Obvestila</a>
+        <a href="#">Pomoč</a>
       </li>
-      <li><a data-toggle="collapse" href="#vsebina-collapse">Vsebina<span class="caret"></span></a>
+      <li><a data-toggle="collapse" href="#vsebina-collapse">Brskanje <span class="caret"></span></a>
         <ul id="vsebina-collapse" class="collapse list-unstyled">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
+          <li><a href="">Po številkah</a></li>
+          <li><a href="">Po avtorju</a></li>
+          <li><a href="">Po naslovu</a></li>
+          <li><a href="">Ostale publikacije</a></li>
         </ul>
       </li>
-      <li>
-        <a href="#">Overview</a>
+      <li><a data-toggle="collapse" href="#obvestila-collapse">Obvestila <span class="caret"></span></a>
+        <ul id="obvestila-collapse" class="collapse list-unstyled">
+          <li><a href="">Poglej</a></li>
+          <li><a href="">Naroči se</a></li>
+        </ul>
       </li>
-      <li>
-        <a href="#">Events</a>
+      <li><a data-toggle="collapse" href="#info-collapse">Informacije <span class="caret"></span></a>
+        <ul id="info-collapse" class="collapse list-unstyled">
+          <li><a href="">Za bralce</a></li>
+          <li><a href="">Za avtorje</a></li>
+          <li><a href="">Za knjižničarje</a></li>
+        </ul>
       </li>
-      <li>
-        <a href="#">About</a>
+      <li><a data-toggle="collapse" href="#jezik-collapse">Jezik <span class="caret"></span></a>
+        <ul id="jezik-collapse" class="collapse list-unstyled">
+          <li><a href="">Slovenščina</a></li>
+          <li><a href="">English</a></li>
+          <li><a href="">Deutsch</a></li>
+          <li><a href="">Hrvatski</a></li>
+          <li><a href="">Srpski</a></li>
+        </ul>
       </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+      <li><a data-toggle="collapse" href="#pisava-collapse">Velikost pisave <span class="caret"></span></a>
+        <ul id="pisava-collapse" class="collapse list-unstyled">
+          <li><a href="">Povečaj</a></li>
+          <li><a href="">Privzeto</a></li>
+          <li><a href="">Zmanjšaj</a></li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -124,7 +139,7 @@
       <h2>Primerjalna književnost</h2>
       <br>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <p>Primerjalna književnost je znanstvena revija, ki jo od leta 1978 izdaja Slovensko društvo za primerjalno književnost. 
             Izhaja trikrat letno in objavlja izvirne razprave s področij primerjalne književnosti, 
             literarne teorije, metodologije literarne vede, literarne estetike in drugih strok, 
@@ -157,12 +172,13 @@
           <br>
           <p>ISSN: 2591-1805</p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <img id="naslovnica" src="./Images/naslovnica.png">
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 </body>
 </html>
