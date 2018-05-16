@@ -31,6 +31,11 @@
   color: black;
 }
 
+#navbar.navbar-fixed-top {
+  width: 80%;
+  margin: auto;
+}
+
 /* Page content */
 .content {
   padding: 16px;
@@ -211,6 +216,12 @@ body {
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
+  }
+}
+
+@media(min-width:1366px) {
+  #wrapper.toggled {
+    padding-left: 130px;
   }
 }
 
