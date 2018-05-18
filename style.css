@@ -263,3 +263,11 @@ ul.dropdown-lr {
 #naslovnica {
   width: 100%;
 }
+
+.hints {
+  font-size: 0.8em;
+}
+
+.form-horizontal .control-label{
+   text-align:left !important; 
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <title>Primerjalna književnost</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+<div id="page">
+<img id="logo-img" src="./Images/dark_napis.png" onload="onLoadLogo()">
+<nav id="navbar" class="navbar navbar-default">
+  <div class="container-fluid" style="padding-right:35px">
+    <div class="navbar-header">
+      <img id="small-logo-img" class="hide-logo" src="./Images/navbar_logo.png">
+    </div>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="./index.html">DOMOV</a>
+      </li>
+      <li>
+        <a href="./about.html">O PUBLIKACIJI</a>
+      </li>
+      <li class="active">
+        <a href="#">ISKANJE</a>
+      </li>
+      <li>
+        <a href="#">TRENUTNA ŠTEVLIKA</a>
+      </li>
+      <li>
+        <a href="#">ARHIVI</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" style="background:white">PRIJAVA <span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+          <div class="col-lg-12" style="padding-top:15px">
+            <form id="ajax-login-form" method="post" role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Uporabniško ime" value="" autocomplete="off">
+              </div>
+  
+              <div class="form-group">
+                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Geslo" autocomplete="off">
+              </div>
+  
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <input type="checkbox" tabindex="3" name="remember" id="remember">
+                    <label style="font-weight:normal" for="remember"> Zapomni si me</label>
+                  </div>
+                  <div class="col-xs-5 pull-right">
+                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Prijava">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="text-center">
+                      <a href="" tabindex="5" class="forgot-password">Pozabljeno geslo?</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li>
+        <a href="" class="btn btn-secondary" id="menu-toggle"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      </li>
+      <li>
+        <a href="#">Open Journal Systems</a>
+      </li>
+      <li>
+        <a href="#">Pomoč</a>
+      </li>
+      <li><a data-toggle="collapse" href="#vsebina-collapse">Brskanje <span class="caret"></span></a>
+        <ul id="vsebina-collapse" class="collapse list-unstyled">
+          <li><a href="">Po številkah</a></li>
+          <li><a href="">Po avtorju</a></li>
+          <li><a href="">Po naslovu</a></li>
+          <li><a href="">Ostale publikacije</a></li>
+        </ul>
+      </li>
+      <li><a data-toggle="collapse" href="#obvestila-collapse">Obvestila <span class="caret"></span></a>
+        <ul id="obvestila-collapse" class="collapse list-unstyled">
+          <li><a href="">Poglej</a></li>
+          <li><a href="">Naroči se</a></li>
+        </ul>
+      </li>
+      <li><a data-toggle="collapse" href="#info-collapse">Informacije <span class="caret"></span></a>
+        <ul id="info-collapse" class="collapse list-unstyled">
+          <li><a href="">Za bralce</a></li>
+          <li><a href="">Za avtorje</a></li>
+          <li><a href="">Za knjižničarje</a></li>
+        </ul>
+      </li>
+      <li><a data-toggle="collapse" href="#jezik-collapse">Jezik <span class="caret"></span></a>
+        <ul id="jezik-collapse" class="collapse list-unstyled">
+          <li><a href="">Slovenščina</a></li>
+          <li><a href="">English</a></li>
+          <li><a href="">Deutsch</a></li>
+          <li><a href="">Hrvatski</a></li>
+          <li><a href="">Srpski</a></li>
+        </ul>
+      </li>
+      <li><a data-toggle="collapse" href="#pisava-collapse">Velikost pisave <span class="caret"></span></a>
+        <ul id="pisava-collapse" class="collapse list-unstyled">
+          <li><a href="">Povečaj</a></li>
+          <li><a href="">Privzeto</a></li>
+          <li><a href="">Zmanjšaj</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="content">
+    <div class="container-fluid">
+      <h2><strong>Iskanje</strong></h2>
+      <br>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Išči!</button>
+                </span>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#moznosti">Možnosti iskanja</button>
+                </span>
+              </div>
+              <div id="moznosti" class="collapse">
+                <form class="form-horizontal">
+                  <h3>Kategorije iskanja</h3>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="avtorji" class="col-sm-3 control-label">Avtorji</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="avtorji">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="naslov" class="col-sm-3 control-label">Naslov</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="naslov">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="povzetek" class="col-sm-3 control-label">Povzetek</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="povzetek">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="celotno" class="col-sm-3 control-label">Celotno besedilo</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="celotno">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="dodatne" class="col-sm-3 control-label">Dodatne datoteke</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="dodatne">
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <h3>Datum</h3>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="od" class="col-sm-3 control-label">Od</label>
+                      <div class="col-sm-7">
+                        <input type="date" class="form-control" id="od">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="do" class="col-sm-3 control-label">Do</label>
+                      <div class="col-sm-7">
+                        <input type="date" class="form-control" id="do">
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <h3>Indeksni izrazi</h3>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="veda" class="col-sm-3 control-label">Veda(e)</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="veda">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="besede" class="col-sm-3 control-label">Ključne besede</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="besede">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="tip" class="col-sm-3 control-label">Tip (metoda/pristop)</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="tip">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="pokritost" class="col-sm-3 control-label">Pokritost</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="pokritost">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group-sm">
+                      <label for="polja" class="col-sm-3 control-label">Vsa iskalna polja</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" id="polja">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <br>
+              <h3>Namigi za iskanje</h3>
+              <ul class="hints">
+                <li>Iskalni pogoji so občutljivi na male/velike črke</li>
+                <li>Pogoste besede so prezrte</li>
+                <li>Privzeto se pokažejo le prispevki, ki vsebujejo vse iskalne besede (tj. AND je privzeto)</li>
+                <li>Združite več besed z OR, da poiščete prispevke, ki vsebujejo eno od isklanih besed; npr., izobraževanje OR raziskava</li>
+                <li>Uporabite oklepaje za zahtevnejše iskalne pogoje; npr., arhiv ((publikacija OR konferenca) NOT teza)</li>
+                <li>Za iskanje točnih fraz uporabite dvojne narekovaje; e.g., "odprtokodni sistem izdajanja"</li>
+                <li>Za izločitev besed uporabite pred besedo pomišljaj - ali NOT; e.g. evrska -politika or evrska NOT politika</li>
+                <li>Uporabite * v iskalnem pogoju kot nadomestni znak za katerokoli zaporedje znakov ; npr., soci* bi vrnil dokumente, ki vsebujejo "sociološko" or "socialno"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <img id="naslovnica" src="./Images/naslovnica.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+  
