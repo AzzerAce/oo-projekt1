@@ -271,3 +271,11 @@ ul.dropdown-lr {
 .form-horizontal .control-label{
    text-align:left !important; 
 }
+
+.titles {
+  font-size: 1.2em;
+}
+
+.article {
+  font-size:0.9em;
+}
