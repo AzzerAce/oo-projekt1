@@ -279,3 +279,20 @@ ul.dropdown-lr {
 .article {
   font-size:0.9em;
 }
+
+.arhiv {
+  width: 25%;
+  display: block;
+  margin: auto;
+}
+
+.barhiv {
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.naslovcek {
+  margin:auto;
+  text-align: center;
+}
